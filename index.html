@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="modal-bg modal-bg--active">
+      <div class="modal">
+        <a class="close-icon" id="closeModal"></a>
+        <div class="modal-content">
+          <div class="status-icon"></div>
+          <h2 class="modal-title">Stripe connected successfully</h2>
+          <p class="modal-description">
+            Your Stripe account is now linked to BitAds. <br />
+            You can start tracking payments and rewarding miners.
+          </p>
+
+          <div class="modal-account-id-block">
+            <h4 class="modal-account-id-text">Connected account ID</h4>
+            <div class="modal-id-field">acct_1Q2w3E4r5T6y7U8i</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modalBg = document.querySelector('.modal-bg');
+
+      const closeModal = () => {
+        modalBg.classList.remove('modal-bg--active');
+      };
+
+      document
+        .getElementById('closeModal')
+        .addEventListener('click', closeModal);
+      modalBg.addEventListener(
+        'click',
+        (ev) => ev.target === modalBg && closeModal()
+      );
+      document.addEventListener(
+        'keydown',
+        (ev) => ev.key === 'Escape' && closeModal()
+      );
+    </script>
+  </body>
+</html>

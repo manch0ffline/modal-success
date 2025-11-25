@@ -1,0 +1,123 @@
+:root {
+--main-color: #0B0E14;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.modal-bg {
+  background-color: #000000bc;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-inline: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  min-width: 300px;
+
+  opacity: 0;
+}
+
+.modal-bg--active {
+  opacity: 1;
+}
+
+.modal {
+  background-color: var(--main-color);
+  padding: 12px 12px 39px;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 490px;
+}
+
+.close-icon {
+  box-sizing: content-box;
+  cursor: pointer;
+  background-image: url(./imgs/icons/close-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #10141F;
+  padding: 7px;
+  border-radius: 5px;
+
+  height: 10px;
+  width: 10px;
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+  background-color: #131724;
+}
+
+.modal-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.status-icon {
+  background-image: url(./imgs/success.svg);
+  height: 56px;
+  width: 56px;
+}
+
+.modal-title {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 17px;
+  text-align: center;
+}
+
+.modal-description {
+  font-size: 14px;
+  color: #B5B8C5;
+  margin-block: 18px;
+  text-align: center;
+  line-height: 1.5;
+}
+.modal-account-id-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-account-id-text {
+  color: #6F7485;
+  font-size: 12px;
+}
+.modal-id-field {
+  transition: all 0.2s ease;
+  width: 300px;
+  padding-block: 10px;
+  background-color: #10141F;
+  border: 1px solid #1C1F29;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.modal-id-field:hover {
+ background-color: #161c2b;
+}
+  
